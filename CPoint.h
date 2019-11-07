@@ -12,8 +12,8 @@ public://Accessible partout, dans et à l'extérieur de la classe
 
 	//Prototypes ou déclarations 
 	//Les gets
-	float getX();
-	float getY();
+	float abscisse();
+	float ordonnee();
 
 	//Les sets
 	void setX(float f_X);

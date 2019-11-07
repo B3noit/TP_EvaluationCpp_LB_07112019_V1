@@ -2,11 +2,10 @@
 #include <iostream>
 
 //Accesseur/////////////
-float CPoint::getX(){
+float CPoint::abscisse() {
 	return this->f_X;
 }
-
-float CPoint::getY()
+float CPoint::ordonnee()
 {
 	return this->f_Y;
 }
@@ -43,21 +42,4 @@ void CPoint::deplace(float f_X, float f_Y)
 {
 	this->f_X = this->f_X + f_X;
 	this->f_Y = this->f_Y + f_Y;
-}
-
-
-// affiche////////////////////////////
-//
-//BUT : Afficher les coordonnées cartésiennes d'un point.
-//
-//PRINCIPE : On affiche les coordonnées en utlisant les accesseurs des coordonnées.
-//
-//ENTREE : Un point.
-//
-//SORTIE : Les coordonnées du point dans la console.
-///////////////////////////////////////////////////
-void CPoint::affiche()
-{
-	std::cout << "Notre point en X : " << this->getX() << std::endl;
-	std::cout << "Notre point en Y : " << this->getY() << std::endl;
 }
