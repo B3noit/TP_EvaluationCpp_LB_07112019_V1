@@ -1,4 +1,6 @@
 #pragma once
+#define _USE_MATH_DEFINES
+#include <math.h>
 class CPoint
 {
 private://Accessible que dans la classe elle même
@@ -25,5 +27,9 @@ public://Accessible partout, dans et à l'extérieur de la classe
 
 	//Méthodes membres
 	void deplace(float f_X, float f_Y);
-	void affiche();
+	void homothetie(float f_K);
+	void rotation(float f_R);
+	float rho();
+	float theta();
+
 };
