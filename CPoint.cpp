@@ -9,6 +9,34 @@ float CPoint::ordonnee()
 {
 	return this->f_Y;
 }
+// rho ///////////////////////////////////////////////////////////////////////////////////////
+//
+//BUT : obtenir le rho des coordonnées polaire du point.
+//
+//PRINCIPE : Grâce à pythagore on calcule la distance qui sépare le point de l'origine
+//
+//ENTREE : Un point.
+//
+//SORTIE : Rho.
+///////////////////////////////////////////////////
+float CPoint::rho()
+{
+	return sqrt(pow(this->f_X, 2) + pow(this->f_Y, 2));
+}
+// theta ///////////////////////////////////////////////////////////////////////////////////////////
+//
+//BUT : obtenir le theta des coordonnées polaire du point.
+//
+//PRINCIPE : Grâce à une formule on calcule l'angle ou se situe notre point rapport à l'origine.
+//
+//ENTREE : Un point.
+//
+//SORTIE : Theta.
+///////////////////////////////////////////////////
+float CPoint::theta()
+{
+	return atan2(this->f_Y, this->f_X);
+}
 
 
 //Setteur//////////////////
@@ -19,6 +47,14 @@ void CPoint::setY(float f_Y)
 void CPoint::setX(float f_X)
 {
 	this->f_X = f_X;
+}
+void CPoint::setRho(float f_Rho)
+{
+	this->f_Rho = f_Rho;
+}
+void CPoint::setTheta(float f_Theta)
+{
+	this->f_Theta= f_Theta;
 }
 
 //Constructeur//////////
@@ -84,33 +120,7 @@ void CPoint::rotation(float f_R)
 	this->f_Y = round(f_y);
 }
 
-// rho ///////////////////////////////////////////////////////////////////////////////////////
-//
-//BUT : obtenir le rho des coordonnées polaire du point.
-//
-//PRINCIPE : Grâce à pythagore on calcule la distance qui sépare le point de l'origine
-//
-//ENTREE : Un point.
-//
-//SORTIE : Rho.
-///////////////////////////////////////////////////
-float CPoint::rho()
-{
-	return sqrt(pow(this->f_X,2)+pow(this->f_Y,2));
-}
 
 
-// theta ///////////////////////////////////////////////////////////////////////////////////////////
-//
-//BUT : obtenir le theta des coordonnées polaire du point.
-//
-//PRINCIPE : Grâce à une formule on calcule l'angle ou se situe notre point rapport à l'origine.
-//
-//ENTREE : Un point.
-//
-//SORTIE : Theta.
-///////////////////////////////////////////////////
-float CPoint::theta()
-{
-	return atan2(this->f_Y, this->f_X);
-}
+
+
